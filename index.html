@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DexAnyTwist: Twist anything with dexterous hand</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/logo.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <div style="display: flex; align-items: center; justify-content: center; flex-wrap: nowrap;">
+            <h1 class="title is-1 publication-title"
+                style="margin: 0; flex: 1;">
+              DexAnyTwist: Learning General Dexterous Twisting with Hybrid Manipulation System Identification
+            </h1>
+          </div>
+          <!-- <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a >Authors</a><sup>1</sup>,</span>
+          </div> -->
+
+          <!-- <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Huazhong University of Science and Technology</span>
+          </div> -->
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://academic.oup.com/nsr/advance-article-pdf/doi/10.1093/nsr/nwag351/68501328/nwag351.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=e1vVgf3w1qc"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/Prevalenter/DexAnyTwist"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Dataset</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://prevalenter.github.io/dexanytwist.github.io/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a> -->
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/head.jpg" alt="DexAnyTwist Overview" style="width: 100%; height: auto; border-radius: 10px;">
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">DexAnyTwist</span> trains a general policy in simulation that can twist any object.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/sim_screw1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/sim_bulb.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/sim_screwdriver.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/sim_valve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/sim_valve_long.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/sim_screw.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item sim_botton1">
+          <video poster="" id="sim_botton1" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/sim_button1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item sim_botton2">
+          <video poster="" id="sim_botton2" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/sim_botton2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item sim_cosm">
+          <video poster="" id="sim_cosm" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/sim_cosm.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Developing general-purpose dexterous manipulation, particularly for intricate twisting tasks, remains a long-standing challenge. Large-scale training on massive datasets encompassing a vast spectrum of geometric and physical properties is a promising path. Yet, the hybrid dynamical space inherent in heterogeneous datasets creates intrinsic conflicts, where standard learning paradigms fail to synthesize a cohesive control strategy across disparate physical laws. We present DexAnyTwist, a framework that reformulates the general twisting task as a problem of identification and control within a hybrid dynamical system. This approach utilizes forward partitioning to isolate data modes based on expert performance and backward refinement to optimize specialized policies. A learned gating mechanism then dynamically composes these experts, effectively mitigating interference between distinct dynamic modes. Beyond achieving state-of-the-art performance on our large-scale dataset, our framework spontaneously evolves manipulation primitives consistent with human twisting, and demonstrates superior zero-shot generalization to novel real-world geometries. This study not only solves a complex class of twisting tasks but also establishes a scalable pathway for robots to acquire general-purpose contact-rich manipulation skills.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/e1vVgf3w1qc?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+
+    <div class="columns is-centered">
+      <!-- Visual Effects -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Screwdriver</h2>
+          <p>
+            This task demonstrates the precise control of a multi-fingered robotic hand over small tools. Through fine fingertip coordination, the robot can securely grasp the screwdriver and perform a vertical driving motion aligned with the axis.
+          </p>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/real_screwdriver.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Visual Effects -->
+
+      <!-- Matting -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Bulb</h2>
+          <p>
+            This task demonstrates handling fragile, curved objects. By maintaining a stable grasp without dropping, the robot precisely rotates and successfully screws the bulb into the base.
+          </p>
+          <video id="matting-video" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/real_bulb.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Matting -->
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">More Objections</h2>
+
+        <!-- 4 videos per row -->
+        <div class="columns is-multiline is-centered">
+
+          <div class="column is-one-quarter">
+            <video autoplay controls muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/real_valve.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column is-one-quarter">
+            <video autoplay controls muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/real_color_bottle.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column is-one-quarter">
+            <video autoplay controls muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/real_others.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column is-one-quarter">
+            <video autoplay controls muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/bulb1.mp4" type="video/mp4">
+            </video>
+          </div>
+
+
+
+          <div class="column is-one-quarter">
+            <video autoplay controls muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/bulb2.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column is-one-quarter">
+            <video autoplay controls muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/cosmetic.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column is-one-quarter">
+            <video autoplay controls muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/glass_bottle.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column is-one-quarter">
+            <video autoplay controls muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/plastic_bottle.mp4" type="video/mp4">
+            </video>
+          </div>
+
+
+
+
+
+
+          <div class="column is-one-quarter">
+            <video autoplay controls muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/glss_bottle2.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column is-one-quarter">
+            <video autoplay controls muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/rotation_switch.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column is-one-quarter">
+            <video autoplay controls muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/water_bottle.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column is-one-quarter">
+            <video autoplay controls muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/real_screw.mp4" type="video/mp4">
+            </video>
+          </div>
+
+
+
+
+
+
+
+          <div class="column is-one-quarter">
+            <video autoplay controls muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/real_others1.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column is-one-quarter">
+            <video autoplay controls muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/real_blue_bottle.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column is-one-quarter">
+            <video autoplay controls muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/real_shampoo.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column is-one-quarter">
+            <video autoplay controls muted loop playsinline style="width: 100%;">
+              <source src="./static/videos/real_tools.mp4" type="video/mp4">
+            </video>
+          </div>
+          
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{liu2026dexanytwist,
+  title={DexAnyTwist: Learning General Dexterous Twisting with Hybrid Manipulation System Identification},
+  author={Liu, Xing and Dong, Yunlong and Wan, Jun and Deng, Linan and Hua, Feng and Shen, Yi and Yu, Min and Ma, Guijun and Cheng, Cheng and Song, Haitao and others},
+  journal={National Science Review},
+  pages={nwag351},
+  year={2026},
+  publisher={Oxford University Press}
+}</code></pre>
+  </div>
+</section>
+
+
+</body>
+</html>
