@@ -155,3 +155,15 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+/* Compact spacing for the object video matrices. */
+.video-grid {
+  margin-left: -0.15rem;
+  margin-right: -0.15rem;
+  margin-top: -0.15rem;
+  margin-bottom: 1rem;
+}
+
+.video-grid > .column {
+  padding: 0.15rem;
+}
