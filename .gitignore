@@ -218,3 +218,8 @@ __marimo__/
 .streamlit/secrets.toml
 
 static/videos_raw
+
+dexexcavation.github.io/static/videos.zip
+
+.DS_Store
+*/.DS_Store

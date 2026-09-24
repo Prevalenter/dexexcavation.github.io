@@ -77,6 +77,7 @@
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
+              <!--
               <span class="link-block">
                 <a href="https://academic.oup.com/nsr/advance-article-pdf/doi/10.1093/nsr/nwag351/68501328/nwag351.pdf"
                    class="external-link button is-normal is-rounded is-dark">
@@ -86,6 +87,7 @@
                   <span>Paper</span>
                 </a>
               </span>
+              -->
               <!-- <span class="link-block">
                 <a href="https://arxiv.org/abs/2011.12948"
                    class="external-link button is-normal is-rounded is-dark">
@@ -96,8 +98,9 @@
                 </a>
               </span> -->
               <!-- Video Link. -->
+              <!--
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=e1vVgf3w1qc"
+                <a href="https://www.youtube.com/watch?v=ce2kmOa-XX8"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -105,7 +108,9 @@
                   <span>Video</span>
                 </a>
               </span>
+              -->
               <!-- Code Link. -->
+              <!--
               <span class="link-block">
                 <a href="https://github.com/Prevalenter/DexAnyTwist"
                    class="external-link button is-normal is-rounded is-dark">
@@ -115,6 +120,7 @@
                   <span>Dataset</span>
                   </a>
               </span>
+              -->
               <!-- Dataset Link. -->
               <!-- <span class="link-block">
                 <a href="https://prevalenter.github.io/dexanytwist.github.io/"
@@ -222,7 +228,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Developing general-purpose dexterous manipulation, particularly for intricate twisting tasks, remains a long-standing challenge. Large-scale training on massive datasets encompassing a vast spectrum of geometric and physical properties is a promising path. Yet, the hybrid dynamical space inherent in heterogeneous datasets creates intrinsic conflicts, where standard learning paradigms fail to synthesize a cohesive control strategy across disparate physical laws. We present DexAnyTwist, a framework that reformulates the general twisting task as a problem of identification and control within a hybrid dynamical system. This approach utilizes forward partitioning to isolate data modes based on expert performance and backward refinement to optimize specialized policies. A learned gating mechanism then dynamically composes these experts, effectively mitigating interference between distinct dynamic modes. Beyond achieving state-of-the-art performance on our large-scale dataset, our framework spontaneously evolves manipulation primitives consistent with human twisting, and demonstrates superior zero-shot generalization to novel real-world geometries. This study not only solves a complex class of twisting tasks but also establishes a scalable pathway for robots to acquire general-purpose contact-rich manipulation skills.
+            Excavating a semi-buried object requires coordinating arm and hand motion over a target whose exposed geometry shifts with each contact. Displaced particles repack around the object, and tactile signals reflect a mixture of object surface and surrounding particles rather than the target state alone. Prior work addresses tactile localization, granular manipulation, or rigid-object grasping in isolation, but none provides the joint record of vision, tactile, and arm-hand kinematics that coordinated excavation requires. We present DexCav, a multimodal sensorimotor policy for dexterous excavation task, together with a dataset of 400 teleoperated episodes across eight object types (50 per object) to train and evaluate it. The dataset records dual-view RGB, arm-hand proprioception, tactile measurements, operator commands, and tracker poses aligned on a common 15-Hz timeline. The policy fuses dual-view RGB, arm-hand proprioception, and compact tactile statistics through an Action Chunking Transformer, which builds on a conditional variational autoencoder to predict a 24-step joint-configuration chunk and execute the first 12 steps before replanning. We report real-robot outcomes across eight evaluation-set objects with operator-labeled results, and qualitative deployment on six additional object types not seen during training.
           </p>
         </div>
       </div>
@@ -234,7 +240,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/e1vVgf3w1qc?rel=0&amp;showinfo=0"
+          <iframe src="https://www.youtube.com/embed/ce2kmOa-XX8?rel=0&amp;showinfo=0"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
@@ -404,6 +410,7 @@
   </div>
 </section>
 
+<!--
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
@@ -417,6 +424,7 @@
 }</code></pre>
   </div>
 </section>
+-->
 
 
 </body>
