@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="DexCav presents a multimodal sensorimotor policy and a synchronized teleoperation dataset for dexterous excavation of semi-buried objects.">
+  <meta name="keywords" content="DexCav, dexterous manipulation, robotic excavation, tactile sensing, multimodal learning, teleoperation dataset">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="DexCav: Dexterous exCavation of Semi-Buried Objects">
+  <meta property="og:description" content="A multimodal sensorimotor policy and synchronized teleoperation dataset for dexterous excavation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://prevalenter.github.io/dexexcavation.github.io/">
+  <meta property="og:image" content="https://prevalenter.github.io/dexexcavation.github.io/static/images/system_overview.png">
+  <meta name="twitter:card" content="summary_large_image">
   <title>DexCav: Dexterous exCavation of Semi-Buried Objects with Multimodal Sensorimotor Policy</title>
+  <link rel="canonical" href="https://prevalenter.github.io/dexexcavation.github.io/">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -26,110 +33,59 @@
         rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/index.css?v=20260930-2">
   <link rel="icon" href="./static/images/logo.png">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
+  <script defer src="./static/js/index.js"></script>
 </head>
 <body>
-
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-
-</nav>
-
-
-<section class="hero">
+<section class="hero project-hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <div style="display: flex; align-items: center; justify-content: center; flex-wrap: nowrap;">
-            <h1 class="title is-1 publication-title"
-                style="margin: 0; flex: 1;">
+          <div class="publication-heading">
+            <h1 class="title is-1 publication-title">
               DexCav: Dexterous exCavation of Semi-Buried Objects with Multimodal Sensorimotor Policy
             </h1>
           </div>
-          <!-- <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a >Authors</a><sup>1</sup>,</span>
-          </div> -->
-
-          <!-- <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Huazhong University of Science and Technology</span>
-          </div> -->
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
-              <!--
-              <span class="link-block">
-                <a href="https://academic.oup.com/nsr/advance-article-pdf/doi/10.1093/nsr/nwag351/68501328/nwag351.pdf"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              -->
-              <!-- <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span> -->
               <!-- Video Link. -->
-              <!--
               <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=ce2kmOa-XX8"
-                   class="external-link button is-normal is-rounded is-dark">
+                   class="external-link button is-normal is-rounded is-dark"
+                   target="_blank" rel="noopener noreferrer">
                   <span class="icon">
-                      <i class="fab fa-youtube"></i>
+                    <i class="fab fa-youtube"></i>
                   </span>
                   <span>Video</span>
                 </a>
               </span>
-              -->
               <!-- Code Link. -->
-              <!--
               <span class="link-block">
-                <a href="https://github.com/Prevalenter/DexAnyTwist"
-                   class="external-link button is-normal is-rounded is-dark">
+                <a href="https://prevalenter.github.io/dexexcavation.github.io/"
+                   class="external-link button is-normal is-rounded is-dark"
+                   target="_blank" rel="noopener noreferrer">
                   <span class="icon">
-                      <i class="fab fa-github"></i>
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (coming soon)</span>
+                </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://drive.google.com/drive/folders/1v-tm5jcuH-26QcOveGWhI5ZOK7TAZ9SG?usp=drive_link"
+                   class="external-link button is-normal is-rounded is-dark"
+                   target="_blank" rel="noopener noreferrer">
+                  <span class="icon">
+                    <i class="fas fa-database"></i>
                   </span>
                   <span>Dataset</span>
-                  </a>
+                </a>
               </span>
-              -->
-              <!-- Dataset Link. -->
-              <!-- <span class="link-block">
-                <a href="https://prevalenter.github.io/dexanytwist.github.io/"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a> -->
             </div>
 
           </div>
@@ -140,85 +96,6 @@
   </div>
 </section>
 
-<!-- Head figure (temporarily hidden)
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <img src="./static/images/head.jpg" alt="DexAnyTwist Overview" style="width: 100%; height: auto; border-radius: 10px;">
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">DexAnyTwist</span> trains a general policy in simulation that can twist any object.
-      </h2>
-    </div>
-  </div>
-</section>
--->
-
-
-<!-- Video exhibition carousel (temporarily hidden)
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/sim_screw1.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/sim_bulb.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/sim_screwdriver.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/sim_valve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/sim_valve_long.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/sim_screw.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item sim_botton1">
-          <video poster="" id="sim_botton1" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/sim_button1.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item sim_botton2">
-          <video poster="" id="sim_botton2" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/sim_botton2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item sim_cosm">
-          <video poster="" id="sim_cosm" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/sim_cosm.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
--->
-
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -228,203 +105,155 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Excavating a semi-buried object requires coordinating arm and hand motion over a target whose exposed geometry shifts with each contact. Displaced particles repack around the object, and tactile signals reflect a mixture of object surface and surrounding particles rather than the target state alone. Prior work addresses tactile localization, granular manipulation, or rigid-object grasping in isolation, but none provides the joint record of vision, tactile, and arm-hand kinematics that coordinated excavation requires. We present DexCav, a multimodal sensorimotor policy for dexterous excavation task, together with a dataset of 400 teleoperated episodes across eight object types (50 per object) to train and evaluate it. The dataset records dual-view RGB, arm-hand proprioception, tactile measurements, operator commands, and tracker poses aligned on a common 15-Hz timeline. The policy fuses dual-view RGB, arm-hand proprioception, and compact tactile statistics through an Action Chunking Transformer, which builds on a conditional variational autoencoder to predict a 24-step joint-configuration chunk and execute the first 12 steps before replanning. We report real-robot outcomes across eight evaluation-set objects with operator-labeled results, and qualitative deployment on six additional object types not seen during training.
+            Excavating a semi-buried object requires coordinated arm-hand motion as contact continually changes the surrounding granular material and the exposed portion of the object. Vision captures the exposed geometry, while tactile feedback combined with arm–hand proprioception helps interpret contacts hidden from view. Prior work has explored tactile localization and manipulation in granular media, but learning coordinated arm–hand policies for semi-buried object excavation remains underexplored. To address this gap, we present DexCav, a multimodal sensorimotor policy for dexterous excavation, together with a synchronized teleoperation dataset comprising 400 demonstrations across eight object types. The dataset records dual-view RGB images, arm–hand proprioception, tactile measurements, glove commands, and tracker poses on a common 15 Hz timeline. Built on the Action Chunking Transformer, the policy combines visual, proprioceptive, and tactile observations to predict a 24-step sequence of arm–hand joint configurations, executing the first 12 steps before replanning. In real-robot evaluation, 61 of 80 monitored trials across the eight object types were recorded as successful, yielding a success rate of 76.25%. Qualitative deployments on six additional object types outside the training set illustrate the excavation behavior beyond the training categories.
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
+  </div>
+</section>
 
-    <!-- Paper video. -->
+<section class="section" id="video">
+  <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
+        <h2 class="title is-3">Project Video</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/ce2kmOa-XX8?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/ce2kmOa-XX8?rel=0"
+                  title="DexCav project video" loading="lazy"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen></iframe>
         </div>
       </div>
     </div>
-    <!--/ Paper video. -->
+
+    <div class="content has-text-centered demonstration-feature featured-demonstration">
+      <h2 class="title is-3">Successfully excavate 6 consecutive times</h2>
+      <video autoplay controls muted loop playsinline
+             poster="./static/images/posters/six-consecutive-successes.jpg"
+             aria-label="Six consecutive successful excavations">
+        <source src="./static/videos/连续成功6次.mp4" type="video/mp4">
+      </video>
+    </div>
   </div>
 </section>
 
-
-<section class="section">
+<section class="section" id="demonstrations">
   <div class="container is-max-desktop">
-
-
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <div class="content has-text-centered">
-          <h2 class="title is-3">Successfully excavate 6 consecutive times</h2>
-          <video autoplay controls muted loop playsinline style="width: 100%;">
-            <source src="./static/videos/连续成功6次.mp4" type="video/mp4">
-          </video>
+        <h2 class="title is-3 demo-heading demo-heading-first">More Objects</h2>
+
+        <div class="columns is-multiline is-centered video-grid">
+          <div class="column is-one-third"><video autoplay controls muted loop playsinline poster="./static/images/posters/pumpkin.jpg" aria-label="Pumpkin excavation"><source src="./static/videos/南瓜.mp4" type="video/mp4"></video></div>
+          <div class="column is-one-third"><video autoplay controls muted loop playsinline poster="./static/images/posters/potato.jpg" aria-label="Potato excavation"><source src="./static/videos/土豆.mp4" type="video/mp4"></video></div>
+          <div class="column is-one-third"><video autoplay controls muted loop playsinline poster="./static/images/posters/lemon.jpg" aria-label="Lemon excavation"><source src="./static/videos/柠檬.mp4" type="video/mp4"></video></div>
+          <div class="column is-one-third"><video autoplay controls muted loop playsinline poster="./static/images/posters/onion.jpg" aria-label="Onion excavation"><source src="./static/videos/洋葱.mp4" type="video/mp4"></video></div>
+          <div class="column is-one-third"><video autoplay controls muted loop playsinline poster="./static/images/posters/radish.jpg" aria-label="Radish excavation"><source src="./static/videos/萝卜.mp4" type="video/mp4"></video></div>
+          <div class="column is-one-third"><video autoplay controls muted loop playsinline poster="./static/images/posters/carrot.jpg" aria-label="Carrot excavation"><source src="./static/videos/红萝卜.mp4" type="video/mp4"></video></div>
         </div>
 
-        <h2 class="title is-3">More Objects</h2>
-
-        <!-- 3 videos per row -->
-        <!-- Legacy videos removed from display.
+        <h2 class="title is-3 demo-heading">Unseen Objects</h2>
         <div class="columns is-multiline is-centered video-grid">
-
-          <div class="column is-one-quarter">
-            <video autoplay controls muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/real_valve.mp4" type="video/mp4">
-            </video>
-          </div>
-
-          <div class="column is-one-quarter">
-            <video autoplay controls muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/real_color_bottle.mp4" type="video/mp4">
-            </video>
-          </div>
-
-          <div class="column is-one-quarter">
-            <video autoplay controls muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/real_others.mp4" type="video/mp4">
-            </video>
-          </div>
-
-          <div class="column is-one-quarter">
-            <video autoplay controls muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/bulb1.mp4" type="video/mp4">
-            </video>
-          </div>
-
-
-
-          <div class="column is-one-quarter">
-            <video autoplay controls muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/bulb2.mp4" type="video/mp4">
-            </video>
-          </div>
-
-          <div class="column is-one-quarter">
-            <video autoplay controls muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/cosmetic.mp4" type="video/mp4">
-            </video>
-          </div>
-
-          <div class="column is-one-quarter">
-            <video autoplay controls muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/glass_bottle.mp4" type="video/mp4">
-            </video>
-          </div>
-
-          <div class="column is-one-quarter">
-            <video autoplay controls muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/plastic_bottle.mp4" type="video/mp4">
-            </video>
-          </div>
-
-
-
-
-
-
-          <div class="column is-one-quarter">
-            <video autoplay controls muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/glss_bottle2.mp4" type="video/mp4">
-            </video>
-          </div>
-
-          <div class="column is-one-quarter">
-            <video autoplay controls muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/rotation_switch.mp4" type="video/mp4">
-            </video>
-          </div>
-
-          <div class="column is-one-quarter">
-            <video autoplay controls muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/water_bottle.mp4" type="video/mp4">
-            </video>
-          </div>
-
-          <div class="column is-one-quarter">
-            <video autoplay controls muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/real_screw.mp4" type="video/mp4">
-            </video>
-          </div>
-
-
-
-
-
-
-
-          <div class="column is-one-quarter">
-            <video autoplay controls muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/real_others1.mp4" type="video/mp4">
-            </video>
-          </div>
-
-          <div class="column is-one-quarter">
-            <video autoplay controls muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/real_blue_bottle.mp4" type="video/mp4">
-            </video>
-          </div>
-
-          <div class="column is-one-quarter">
-            <video autoplay controls muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/real_shampoo.mp4" type="video/mp4">
-            </video>
-          </div>
-
-          <div class="column is-one-quarter">
-            <video autoplay controls muted loop playsinline style="width: 100%;">
-              <source src="./static/videos/real_tools.mp4" type="video/mp4">
-            </video>
-          </div>
-          
-
-
-        </div> -->
-
-        <div class="columns is-multiline is-centered video-grid">
-          <div class="column is-one-third"><video autoplay controls muted loop playsinline style="width: 100%;"><source src="./static/videos/南瓜.mp4" type="video/mp4"></video></div>
-          <div class="column is-one-third"><video autoplay controls muted loop playsinline style="width: 100%;"><source src="./static/videos/土豆.mp4" type="video/mp4"></video></div>
-          <div class="column is-one-third"><video autoplay controls muted loop playsinline style="width: 100%;"><source src="./static/videos/柠檬.mp4" type="video/mp4"></video></div>
-          <div class="column is-one-third"><video autoplay controls muted loop playsinline style="width: 100%;"><source src="./static/videos/洋葱.mp4" type="video/mp4"></video></div>
-          <div class="column is-one-third"><video autoplay controls muted loop playsinline style="width: 100%;"><source src="./static/videos/萝卜.mp4" type="video/mp4"></video></div>
-          <div class="column is-one-third"><video autoplay controls muted loop playsinline style="width: 100%;"><source src="./static/videos/红萝卜.mp4" type="video/mp4"></video></div>
-        </div>
-
-        <h2 class="title is-3">Unseen Objects</h2>
-        <div class="columns is-multiline is-centered video-grid">
-          <div class="column is-one-third"><video autoplay controls muted loop playsinline style="width: 100%;"><source src="./static/videos/领域外_华科.mp4" type="video/mp4"></video></div>
-          <div class="column is-one-third"><video autoplay controls muted loop playsinline style="width: 100%;"><source src="./static/videos/领域外_李子.mp4" type="video/mp4"></video></div>
-          <div class="column is-one-third"><video autoplay controls muted loop playsinline style="width: 100%;"><source src="./static/videos/领域外_橙子.mp4" type="video/mp4"></video></div>
-          <div class="column is-one-third"><video autoplay controls muted loop playsinline style="width: 100%;"><source src="./static/videos/领域外_番茄.mp4" type="video/mp4"></video></div>
-          <div class="column is-one-third"><video autoplay controls muted loop playsinline style="width: 100%;"><source src="./static/videos/领域外_芒果.mp4" type="video/mp4"></video></div>
-          <div class="column is-one-third"><video autoplay controls muted loop playsinline style="width: 100%;"><source src="./static/videos/领域外_蘑菇.mp4" type="video/mp4"></video></div>
+          <div class="column is-one-third"><video autoplay controls muted loop playsinline poster="./static/images/posters/additional-hust.jpg" aria-label="HUST block excavation"><source src="./static/videos/领域外_华科.mp4" type="video/mp4"></video></div>
+          <div class="column is-one-third"><video autoplay controls muted loop playsinline poster="./static/images/posters/plum.jpg" aria-label="Plum excavation"><source src="./static/videos/领域外_李子.mp4" type="video/mp4"></video></div>
+          <div class="column is-one-third"><video autoplay controls muted loop playsinline poster="./static/images/posters/orange.jpg" aria-label="Orange excavation"><source src="./static/videos/领域外_橙子.mp4" type="video/mp4"></video></div>
+          <div class="column is-one-third"><video autoplay controls muted loop playsinline poster="./static/images/posters/tomato.jpg" aria-label="Tomato excavation"><source src="./static/videos/领域外_番茄.mp4" type="video/mp4"></video></div>
+          <div class="column is-one-third"><video autoplay controls muted loop playsinline poster="./static/images/posters/mango.jpg" aria-label="Mango excavation"><source src="./static/videos/领域外_芒果.mp4" type="video/mp4"></video></div>
+          <div class="column is-one-third"><video autoplay controls muted loop playsinline poster="./static/images/posters/mushroom.jpg" aria-label="Mushroom excavation"><source src="./static/videos/领域外_蘑菇.mp4" type="video/mp4"></video></div>
         </div>
       </div>
     </div>
-
-
-
-
-
   </div>
 </section>
 
-<!--
-<section class="section" id="BibTeX">
+<section class="section figure-section" id="system-overview">
+  <div class="container is-max-desktop">
+    <div class="section-heading has-text-centered">
+      <h2 class="title is-3">System Overview</h2>
+    </div>
+    <figure class="project-figure">
+      <img src="./static/images/system_overview.png"
+           width="1867" height="1299" loading="lazy" decoding="async"
+           alt="DexCav system with teleoperation, visual and tactile sensing, policy inference, and robot execution.">
+      <figcaption>
+        Overview of DexCav for semi-buried object excavation. Blue arrows indicate teleoperation, and orange arrows indicate policy deployment.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section figure-section" id="method">
+  <div class="container is-max-desktop">
+    <div class="section-heading has-text-centered">
+      <h2 class="title is-3">Multimodal Sensorimotor Policy</h2>
+    </div>
+    <figure class="project-figure project-figure-wide">
+      <img src="./static/images/method_overview.png"
+           width="3417" height="1249" loading="lazy" decoding="async"
+           alt="DexCav policy architecture for multimodal sensing, action-chunk prediction, and closed-loop deployment.">
+      <figcaption>
+        Global and wrist RGB, arm-hand state, and tactile statistics condition a 24-step action chunk; the first 12 steps are executed before replanning.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section figure-section" id="dataset">
+  <div class="container is-max-desktop">
+    <div class="section-heading has-text-centered">
+      <h2 class="title is-3">Synchronized Teleoperation Dataset</h2>
+    </div>
+    <figure class="project-figure">
+      <img src="./static/images/dataset_overview.png"
+           width="2129" height="1495" loading="lazy" decoding="async"
+           alt="DexCav teleoperation procedure, recorded modalities, dataset scale, and eight object types.">
+      <figcaption>
+        Curated dexterous-excavation dataset, with fifty episodes retained per object type.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section figure-section" id="evaluation">
+  <div class="container is-max-desktop">
+    <div class="section-heading has-text-centered">
+      <h2 class="title is-3">Robot Evaluation</h2>
+    </div>
+    <div class="results-grid">
+      <figure class="project-figure result-figure">
+        <img src="./static/images/success_duration_a.png"
+             width="1200" height="405" loading="lazy" decoding="async"
+             alt="Success rates for ten robot trials on each of eight evaluation object types.">
+        <figcaption>(a) Success rate.</figcaption>
+      </figure>
+      <figure class="project-figure result-figure">
+        <img src="./static/images/success_duration_b.png"
+             width="1200" height="405" loading="lazy" decoding="async"
+             alt="Trial duration distributions for eight evaluation object types.">
+        <figcaption>(b) Trial durations.</figcaption>
+      </figure>
+    </div>
+    <p class="combined-caption has-text-centered">
+      Excavation success rates and trial durations across eight object types, with ten trials per type.
+    </p>
+  </div>
+</section>
+
+<section class="section citation-section is-light" id="BibTeX" hidden>
   <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{liu2026dexanytwist,
-  title={DexExcavation: Learning Contact-Aware Dexterous Excavation of Semi-Buried Objects},
-  author={Liu, Xing and Dong, Yunlong and Wan, Jun and Deng, Linan and Hua, Feng and Shen, Yi and Yu, Min and Ma, Guijun and Cheng, Cheng and Song, Haitao and others},
-  journal={National Science Review},
-  pages={nwag351},
-  year={2026},
-  publisher={Oxford University Press}
+    <h2 class="title is-3 has-text-centered">BibTeX</h2>
+    <p class="has-text-centered citation-note">Author and venue information are withheld during double-blind review.</p>
+    <pre><code>@misc{anonymous2027dexcav,
+  title  = {DexCav: Dexterous exCavation of Semi-Buried Objects with Multimodal Sensorimotor Policy},
+  author = {Anonymous Authors},
+  year   = {2027},
+  note   = {Under double-blind review}
 }</code></pre>
   </div>
 </section>
--->
 
 
 </body>
