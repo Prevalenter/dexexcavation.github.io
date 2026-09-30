@@ -20,7 +20,7 @@ body {
 }
 
 .project-hero .hero-body {
-  padding-bottom: 2.5rem;
+  padding-bottom: 1.25rem;
   padding-top: 4rem;
 }
 
@@ -54,8 +54,8 @@ body {
 }
 
 .section {
-  padding-bottom: 4rem;
-  padding-top: 4rem;
+  padding-bottom: 2.5rem;
+  padding-top: 2.5rem;
 }
 
 .section.is-light {
@@ -63,7 +63,7 @@ body {
 }
 
 .section-heading {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .section-heading .title,
@@ -104,7 +104,7 @@ body {
 
 .results-grid {
   display: grid;
-  gap: 2.25rem;
+  gap: 1.5rem;
 }
 
 .result-figure {
@@ -144,12 +144,12 @@ body {
 }
 
 .featured-demonstration {
-  margin-top: 4rem;
+  margin-top: 2.5rem;
 }
 
 .demo-heading {
   margin-bottom: 1.25rem !important;
-  margin-top: 3.5rem !important;
+  margin-top: 2.5rem !important;
 }
 
 .demo-heading-first {
@@ -209,8 +209,8 @@ body {
   }
 
   .section {
-    padding-bottom: 3rem;
-    padding-top: 3rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
   }
 
 }
