@@ -11,3 +11,12 @@ DexCav is a multimodal sensorimotor policy for dexterous excavation of semi-buri
 ## Repository
 
 This repository hosts the DexCav project website. The research code will be released after the review period.
+
+## Environment Configuration
+
+This is a static project-website repository. The root contains no Python
+requirements, Conda environment file, Node package manifest, or pinned build
+toolchain. Editing the HTML and static assets therefore does not require the
+DexCav policy environment. If a local preview server is used, record its
+tool and version separately; no runtime environment is currently claimed by
+this repository.
